@@ -1,0 +1,240 @@
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context="com.example.jay.dishum_shopkeeper.Orders"
+        android:id="@+id/r">
+
+        <include android:id="@+id/toolbar_actionbar" layout="@layout/toolbar_default"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+
+
+        <android.support.v4.widget.DrawerLayout android:id="@+id/drawer"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="5dp"
+            android:layout_below="@+id/toolbar_actionbar">
+
+            <FrameLayout android:id="@+id/container" android:layout_width="match_parent"
+                android:clickable="true" android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/toolbar_actionbar">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/imageView7"
+                            android:src="@drawable/letter_c"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="true"
+                            android:maxHeight="140dp"
+                            android:maxWidth="140dp"
+                            android:layout_gravity="center_horizontal" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="#fff">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="20dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="Shop Name "
+                                android:id="@+id/etProfile"
+                                android:textSize="14sp"
+                                android:textColor="#a8a8aa"
+                                android:background="#fff"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginBottom="0.5dp"
+                                android:paddingTop="12dp"
+                                android:paddingBottom="12dp"
+                                android:paddingLeft="5dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Chheda Stores"
+                                android:id="@+id/etprofilename"
+                                android:layout_weight="1"
+                                android:background="#fff"
+                                android:gravity="left|center"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginBottom="0.5dp"
+                                android:paddingLeft="40dp"
+                                android:textColor="#000"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="Phone Number "
+                                android:id="@+id/etPronumber"
+                                android:textSize="14sp"
+                                android:background="#fff"
+                                android:layout_marginBottom="0.5dp"
+                                android:paddingTop="12dp"
+                                android:paddingBottom="12dp"
+                                android:textColor="#a8a8aa"
+                                android:paddingLeft="5dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="98200 98200"
+                                android:id="@+id/etpronum"
+                                android:inputType="phone"
+                                android:layout_weight="1"
+                                android:background="#fff"
+                                android:gravity="left|center"
+                                android:layout_marginBottom="0.5dp"
+                                android:paddingLeft="10dp"
+                                android:textColor="#000"
+                                android:textSize="15sp"
+                                android:textIsSelectable="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="Location "
+                                android:id="@+id/etLocation"
+                                android:textSize="14sp"
+                                android:background="#fff"
+                                android:layout_marginBottom="0.5dp"
+                                android:paddingTop="12dp"
+                                android:paddingBottom="12dp"
+                                android:paddingLeft="5dp"
+                                android:textColor="#a8a8aa" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Matunga -(East)"
+                                android:id="@+id/etAdd"
+                                android:layout_weight="1"
+                                android:background="#fff"
+                                android:gravity="left|center"
+                                android:layout_marginBottom="0.5dp"
+                                android:paddingLeft="50dp"
+                                android:textColor="#000"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="Description "
+                                android:id="@+id/etDesc"
+                                android:textSize="14sp"
+                                android:background="#fff"
+                                android:layout_marginBottom="0.5dp"
+                                android:paddingTop="12dp"
+                                android:paddingBottom="12dp"
+                                android:paddingLeft="5dp"
+                                android:textColor="#a8a8aa" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="We provide Household supplies, Dairy products, and stationary."
+                                android:id="@+id/etDescnum"
+                                android:layout_weight="1"
+                                android:background="#fff"
+                                android:gravity="left|center"
+                                android:layout_marginBottom="0.5dp"
+                                android:paddingLeft="30dp"
+                                android:textSize="15sp"
+                                android:textColor="#000" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <com.rey.material.widget.Button
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Edit"
+                        android:id="@+id/btEdit"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="#fff"
+                        android:background="@color/myPrimaryColor"
+                        app:rd_enable="true"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp" />
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+            <fragment android:id="@+id/fragment_drawer"
+                android:name="com.example.jay.dishum_shopkeeper.NavigationDrawerFragment"
+                android:layout_width="@dimen/navigation_drawer_width"
+                android:layout_height="match_parent" android:layout_gravity="start"
+                app:layout="@layout/fragment_navigation_drawer" />
+
+        </android.support.v4.widget.DrawerLayout>
+    </RelativeLayout>
+
+
+
+
+

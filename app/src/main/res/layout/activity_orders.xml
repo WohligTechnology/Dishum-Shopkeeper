@@ -1,0 +1,451 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.jay.dishum_shopkeeper.Orders">
+
+    <include android:id="@+id/toolbar_actionbar" layout="@layout/toolbar_default"
+        android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+
+    <android.support.v4.widget.DrawerLayout android:id="@+id/drawer"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_actionbar">
+
+        <FrameLayout android:id="@+id/container" android:layout_width="match_parent"
+            android:clickable="true" android:layout_height="match_parent">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true">
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+
+
+            <TabHost
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tabHost"
+                android:layout_below="@+id/toolbar_actionbar">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TabWidget
+                        android:id="@android:id/tabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/tab1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp">
+
+                                <ImageView
+                                    android:layout_width="91dp"
+                                    android:layout_height="86dp"
+                                    android:id="@+id/imageView6"
+                                    android:src="@drawable/product"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitStart"
+                                    android:layout_margin="10dp" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:paddingTop="15dp"
+                                    android:layout_gravity="center_horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="Lays 100gms"
+                                        android:id="@+id/textView14"
+                                        android:textSize="18sp"
+                                        android:textColor="#000" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="Rs 20/-"
+                                        android:id="@+id/textView15"
+                                        android:paddingTop="5dp"
+                                        android:textSize="14sp"
+                                        android:textColor="#23a8f5" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="Order Date: 20/08/2015"
+                                        android:id="@+id/textView16"
+                                        android:paddingTop="5dp"
+                                        android:textSize="14sp"
+                                        android:textColor="#a8a8aa" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp">
+
+                                <ImageView
+                                    android:layout_width="91dp"
+                                    android:layout_height="86dp"
+                                    android:id="@+id/imageView6"
+                                    android:src="@drawable/sprit"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitStart"
+                                    android:layout_margin="10dp" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:paddingTop="15dp"
+                                    android:layout_gravity="center_horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="Sprit 500ml"
+                                        android:id="@+id/textView14"
+                                        android:textSize="18sp"
+                                        android:textColor="#000" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="Rs 20/-"
+                                        android:id="@+id/textView15"
+                                        android:paddingTop="5dp"
+                                        android:textSize="14sp"
+                                        android:textColor="#23a8f5" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="Order Date: 18/08/2015"
+                                        android:id="@+id/textView16"
+                                        android:paddingTop="5dp"
+                                        android:textSize="14sp"
+                                        android:textColor="#a8a8aa" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:id="@+id/tab2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp">
+
+                                <ImageView
+                                    android:layout_width="91dp"
+                                    android:layout_height="86dp"
+                                    android:id="@+id/imageView6"
+                                    android:src="@drawable/product"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitStart"
+                                    android:layout_margin="10dp" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:paddingTop="15dp"
+                                    android:layout_gravity="center_horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="Lays 100gms"
+                                        android:id="@+id/textView14"
+                                        android:textSize="18sp"
+                                        android:textColor="#000" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="Rs 20/-"
+                                        android:id="@+id/textView15"
+                                        android:paddingTop="5dp"
+                                        android:textSize="14sp"
+                                        android:textColor="#23a8f5" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="Order Date: 21/08/2015"
+                                        android:id="@+id/textView16"
+                                        android:paddingTop="5dp"
+                                        android:textSize="14sp"
+                                        android:textColor="#a8a8aa" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp">
+
+                                <ImageView
+                                    android:layout_width="91dp"
+                                    android:layout_height="86dp"
+                                    android:id="@+id/imageView6"
+                                    android:src="@drawable/kurkr"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitStart"
+                                    android:layout_margin="10dp" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:paddingTop="15dp"
+                                    android:layout_gravity="center_horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="Kurkure 100gms"
+                                        android:id="@+id/textView14"
+                                        android:textSize="18sp"
+                                        android:textColor="#000" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="Rs 25/-"
+                                        android:id="@+id/textView15"
+                                        android:paddingTop="5dp"
+                                        android:textSize="14sp"
+                                        android:textColor="#23a8f5" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="Order Date: 20/08/2015"
+                                        android:id="@+id/textView16"
+                                        android:paddingTop="5dp"
+                                        android:textSize="14sp"
+                                        android:textColor="#a8a8aa" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp">
+
+                                <ImageView
+                                    android:layout_width="91dp"
+                                    android:layout_height="86dp"
+                                    android:id="@+id/imageView6"
+                                    android:src="@drawable/kj"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitStart"
+                                    android:layout_margin="10dp" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:paddingTop="15dp"
+                                    android:layout_gravity="center_horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="Krackjack 200gms"
+                                        android:id="@+id/textView14"
+                                        android:textSize="18sp"
+                                        android:textColor="#000" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="Rs 30/-"
+                                        android:id="@+id/textView15"
+                                        android:paddingTop="5dp"
+                                        android:textSize="14sp"
+                                        android:textColor="#23a8f5" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="Order Date: 20/08/2015"
+                                        android:id="@+id/textView16"
+                                        android:paddingTop="5dp"
+                                        android:textSize="14sp"
+                                        android:textColor="#a8a8aa" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/tab3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp">
+
+                                <ImageView
+                                    android:layout_width="91dp"
+                                    android:layout_height="86dp"
+                                    android:id="@+id/imageView6"
+                                    android:src="@drawable/sprit"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitStart"
+                                    android:layout_margin="10dp" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:paddingTop="15dp"
+                                    android:layout_gravity="center_horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="Sprit 500ml"
+                                        android:id="@+id/textView14"
+                                        android:textSize="18sp"
+                                        android:textColor="#000" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="Rs 20/-"
+                                        android:id="@+id/textView15"
+                                        android:paddingTop="5dp"
+                                        android:textSize="14sp"
+                                        android:textColor="#23a8f5" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="Order Date: 20/08/2015"
+                                        android:id="@+id/textView16"
+                                        android:paddingTop="5dp"
+                                        android:textSize="14sp"
+                                        android:textColor="#a8a8aa" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+                </LinearLayout>
+            </TabHost>
+        </FrameLayout>
+
+        <fragment android:id="@+id/fragment_drawer"
+            android:name="com.example.jay.dishum_shopkeeper.NavigationDrawerFragment"
+            android:layout_width="@dimen/navigation_drawer_width"
+            android:layout_height="match_parent" android:layout_gravity="start"
+            app:layout="@layout/fragment_navigation_drawer" />
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+</RelativeLayout>

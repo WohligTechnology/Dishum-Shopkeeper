@@ -1,69 +1,47 @@
 package com.example.jay.dishum_shopkeeper;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Paint;
-import android.graphics.PorterDuff;
-import android.graphics.PorterDuffXfermode;
-import android.graphics.Rect;
-import android.graphics.RectF;
-import android.graphics.Typeface;
-import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.rey.material.widget.Button;
-
-
-public class Profile extends ActionBarActivity implements NavigationDrawerCallbacks {
+public class Notifications extends ActionBarActivity implements NavigationDrawerCallbacks {
 
     private Toolbar mToolbar;
-    private TextView tvHome,name,profilename,pronumber,number,location,destination,description,descnumber;
+    private TextView tvHome;
     private NavigationDrawerFragment mNavigationDrawerFragment;
-    private Button edit;
     private int i=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_notifications);
         Intent intent = getIntent();
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar_actionbar);
         tvHome = (TextView) findViewById(R.id.toolbar_title);
-        name = (TextView) findViewById(R.id.etProfile);
-        profilename = (TextView) findViewById(R.id.etprofilename);
-        pronumber = (TextView) findViewById(R.id.etPronumber);
-        number = (TextView) findViewById(R.id.etpronum);
-        location = (TextView) findViewById(R.id.etLocation);
-        destination = (TextView) findViewById(R.id.etAdd);
-        description = (TextView) findViewById(R.id.etDesc);
-        descnumber = (TextView) findViewById(R.id.etDescnum);
-        edit = (Button) findViewById(R.id.btEdit);
         setSupportActionBar(mToolbar);
-
-        tvHome.setText("Profile");
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getFragmentManager().findFragmentById(R.id.fragment_drawer);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+        tvHome.setText("Notifications");
 
         // Set up the drawer.
         mNavigationDrawerFragment.setup(R.id.fragment_drawer, (DrawerLayout) findViewById(R.id.drawer), mToolbar);
-
-
+        // populate the navigation drawer
+        //mNavigationDrawerFragment.setUserData("John Doe", "johndoe@doe.com", BitmapFactory.decodeResource(getResources(), R.drawable.avatar));
     }
 
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
-        //Toast.makeText(this, "Menu item selected -> " + position, Toast.LENGTH_SHORT).show();
 
         if(i>0){
             if(position==0){ //home
@@ -89,7 +67,6 @@ public class Profile extends ActionBarActivity implements NavigationDrawerCallba
 
         }
         i++;
-
     }
 
 
@@ -132,6 +109,4 @@ public class Profile extends ActionBarActivity implements NavigationDrawerCallba
 
         return super.onOptionsItemSelected(item);
     }
-
 }
-

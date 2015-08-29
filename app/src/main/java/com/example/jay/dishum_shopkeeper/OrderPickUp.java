@@ -1,64 +1,41 @@
 package com.example.jay.dishum_shopkeeper;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Paint;
-import android.graphics.PorterDuff;
-import android.graphics.PorterDuffXfermode;
-import android.graphics.Rect;
-import android.graphics.RectF;
-import android.graphics.Typeface;
-import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.rey.material.widget.Button;
+public class OrderPickUp extends ActionBarActivity
+        implements NavigationDrawerCallbacks {
 
-
-public class Profile extends ActionBarActivity implements NavigationDrawerCallbacks {
-
-    private Toolbar mToolbar;
-    private TextView tvHome,name,profilename,pronumber,number,location,destination,description,descnumber;
+    /**
+     * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
+     */
     private NavigationDrawerFragment mNavigationDrawerFragment;
-    private Button edit;
+    private Toolbar mToolbar;
+    private TextView tvHome;
     private int i=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
-        Intent intent = getIntent();
-
+        setContentView(R.layout.activity_order_pick_up);
         mToolbar = (Toolbar) findViewById(R.id.toolbar_actionbar);
-        tvHome = (TextView) findViewById(R.id.toolbar_title);
-        name = (TextView) findViewById(R.id.etProfile);
-        profilename = (TextView) findViewById(R.id.etprofilename);
-        pronumber = (TextView) findViewById(R.id.etPronumber);
-        number = (TextView) findViewById(R.id.etpronum);
-        location = (TextView) findViewById(R.id.etLocation);
-        destination = (TextView) findViewById(R.id.etAdd);
-        description = (TextView) findViewById(R.id.etDesc);
-        descnumber = (TextView) findViewById(R.id.etDescnum);
-        edit = (Button) findViewById(R.id.btEdit);
         setSupportActionBar(mToolbar);
+        tvHome = (TextView) findViewById(R.id.toolbar_title);
 
-        tvHome.setText("Profile");
-
+        tvHome.setText("Product");
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getFragmentManager().findFragmentById(R.id.fragment_drawer);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-
         // Set up the drawer.
         mNavigationDrawerFragment.setup(R.id.fragment_drawer, (DrawerLayout) findViewById(R.id.drawer), mToolbar);
-
-
     }
-
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
@@ -89,7 +66,6 @@ public class Profile extends ActionBarActivity implements NavigationDrawerCallba
 
         }
         i++;
-
     }
 
 
@@ -123,9 +99,9 @@ public class Profile extends ActionBarActivity implements NavigationDrawerCallba
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        /*if (id == R.id.action_settings) {
-            return true;
-        }*/
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
 
         Intent orderpickup = new Intent(this, OrderPickUp.class);
         startActivity(orderpickup);
@@ -133,5 +109,5 @@ public class Profile extends ActionBarActivity implements NavigationDrawerCallba
         return super.onOptionsItemSelected(item);
     }
 
-}
 
+}

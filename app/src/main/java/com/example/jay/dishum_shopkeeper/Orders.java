@@ -37,13 +37,13 @@ public class Orders extends ActionBarActivity implements NavigationDrawerCallbac
 
         // Tab for Photos
 
-        TabSpec compat = tabHost.newTabSpec("Completed");
-        compat.setIndicator("Completed");
+        TabSpec compat = tabHost.newTabSpec("Pending");
+        compat.setIndicator("Pending");
         compat.setContent(R.id.tab1);
         tabHost.addTab(compat);
 
-        TabSpec compat1 = tabHost.newTabSpec("Pending");
-        compat1.setIndicator("Pending");
+        TabSpec compat1 = tabHost.newTabSpec("Completed");
+        compat1.setIndicator("Completed");
         compat1.setContent(R.id.tab2);
         tabHost.addTab(compat1);
 
@@ -72,22 +72,25 @@ public class Orders extends ActionBarActivity implements NavigationDrawerCallbac
         //Toast.makeText(this, "Menu item selected -> " + position, Toast.LENGTH_SHORT).show();
 
         if(i>0){
-
-            if(position==0) { // home
-                Intent search = new Intent(this, MainActivity.class);
-                startActivity(search);
+            if(position==0){ //home
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
             }
-            if(position==1) { // orders
-                Intent search = new Intent(this, Orders.class);
-                startActivity(search);
+            if(position==1){ //products
+                Intent intent = new Intent(this, Products.class);
+                startActivity(intent);
             }
-            if(position==2) { // orders
-                Intent search = new Intent(this, Profile.class);
-                startActivity(search);
+            if (position==2){ //orders
+                Intent intent = new Intent(this, Orders.class);
+                startActivity(intent);
             }
-            if(position==3) { // orders
-                Intent search = new Intent(this, Orders.class);
-                startActivity(search);
+            if (position==3){ //profile
+                Intent intent = new Intent(this, Profile.class);
+                startActivity(intent);
+            }
+            if (position==4){ //notification
+                Intent intent = new Intent(this, Notifications.class);
+                startActivity(intent);
             }
         }
         i++;
@@ -128,6 +131,8 @@ public class Orders extends ActionBarActivity implements NavigationDrawerCallbac
         /*if (id == R.id.action_settings) {
             return true;
         }*/
+        Intent orderpickup = new Intent(this, OrderPickUp.class);
+        startActivity(orderpickup);
 
         return super.onOptionsItemSelected(item);
     }

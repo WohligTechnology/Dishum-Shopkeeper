@@ -1,0 +1,203 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.jay.dishum_shopkeeper.Notifications">
+
+    <include android:id="@+id/toolbar_actionbar" layout="@layout/toolbar_default"
+        android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+
+
+
+
+    <android.support.v4.widget.DrawerLayout android:id="@+id/drawer"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_actionbar">
+
+        <FrameLayout android:id="@+id/container" android:layout_width="match_parent"
+            android:clickable="true" android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/drawer"
+                android:layout_gravity="left">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#c8c8c8"
+                    android:paddingBottom="1dp">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="You have picked up your order from 'Chheda Stores'. Rate it."
+                        android:id="@+id/textView5"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:background="#fff"
+                        android:textSize="14dp"/>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="11th Aug, 2015"
+                        android:id="@+id/textView9"
+                        android:layout_weight="2"
+                        android:gravity="top|right"
+                        android:background="#fff"
+                        android:textSize="12dp"
+                        android:paddingBottom="3dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#c8c8c8"
+                    android:paddingBottom="1dp" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Your order from 'Raj Stores' has been confirmed. You can pick up from the store by tomorrow evening 7pm."
+                        android:id="@+id/textView10"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:background="#fff"
+                        android:textSize="14dp"/>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="10th Sep, 2015"
+                        android:id="@+id/textView11"
+                        android:layout_weight="2"
+                        android:gravity="top|right"
+                        android:background="#fff"
+                        android:textSize="12dp"
+                        android:paddingBottom="3dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#c8c8c8"
+                    android:paddingBottom="1dp" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Raj store has added a new product in the store. Check it out"
+                        android:id="@+id/textView12"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:background="#fff"
+                        android:textSize="14dp"/>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="10th Sep, 2015"
+                        android:id="@+id/textView13"
+                        android:layout_weight="2"
+                        android:gravity="top|right"
+                        android:background="#fff"
+                        android:textSize="12dp"
+                        android:paddingBottom="3dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#c8c8c8"
+                    android:paddingBottom="1dp">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="You favourite 'Chheda' store has some amazing offers for you on food related products."
+                        android:id="@+id/textView52"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:background="#fff"
+                        android:textSize="14dp"/>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="09th Aug, 2015"
+                        android:id="@+id/textView91"
+                        android:layout_weight="2"
+                        android:gravity="top|right"
+                        android:background="#fff"
+                        android:textSize="12dp"
+                        android:paddingBottom="3dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#c8c8c8"
+                    android:paddingBottom="1dp" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Invite your friends and get 20% off on your next order."
+                        android:id="@+id/textView102"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:background="#fff"
+                        android:textSize="14dp"/>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="8th Sep, 2015"
+                        android:id="@+id/textView111"
+                        android:layout_weight="2"
+                        android:gravity="top|right"
+                        android:background="#fff"
+                        android:textSize="12dp"
+                        android:paddingBottom="3dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <fragment android:id="@+id/fragment_drawer"
+            android:name="com.example.jay.dishum_shopkeeper.NavigationDrawerFragment"
+            android:layout_width="@dimen/navigation_drawer_width"
+            android:layout_height="match_parent" android:layout_gravity="start"
+            app:layout="@layout/fragment_navigation_drawer" />
+    </android.support.v4.widget.DrawerLayout>
+
+
+
+
+</RelativeLayout>

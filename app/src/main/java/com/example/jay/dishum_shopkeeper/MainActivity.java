@@ -8,7 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
-
+import android.view.View;
 
 
 public class MainActivity extends ActionBarActivity
@@ -30,6 +30,8 @@ public class MainActivity extends ActionBarActivity
         setSupportActionBar(mToolbar);
         tvHome = (TextView) findViewById(R.id.toolbar_title);
 
+
+
         tvHome.setText("Home");
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getFragmentManager().findFragmentById(R.id.fragment_drawer);
@@ -49,7 +51,7 @@ public class MainActivity extends ActionBarActivity
                 startActivity(intent);
             }
             if(position==1){ //products
-                Intent intent = new Intent(this, Orders.class);
+                Intent intent = new Intent(this, Products.class);
                 startActivity(intent);
             }
             if (position==2){ //orders
@@ -61,8 +63,8 @@ public class MainActivity extends ActionBarActivity
                 startActivity(intent);
             }
             if (position==4){ //notification
-                //Intent intent = new Intent(this, Profile.class);
-                //startActivity(intent);
+                Intent intent = new Intent(this, Notifications.class);
+                startActivity(intent);
             }
 
         }
@@ -103,8 +105,16 @@ public class MainActivity extends ActionBarActivity
 //        if (id == R.id.action_settings) {
 //            return true;
 //        }
+        Intent orderpickup = new Intent(this, OrderPickUp.class);
+        startActivity(orderpickup);
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void showOrders(View v)
+    {
+        Intent orders = new Intent(this, Orders.class);
+        startActivity(orders);
     }
 
 

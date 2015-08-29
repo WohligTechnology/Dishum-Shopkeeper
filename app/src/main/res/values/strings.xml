@@ -8,4 +8,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_orders">Orders</string>
     <string name="title_activity_profile">Profile</string>
+    <string name="title_activity_products">Products</string>
+    <string name="products_off"><strike>Rs 300/-</strike> Rs 250/-</string>
+    <string name="title_activity_order_pick_up">OrderPickUp</string>
+    <string name="title_activity_notifications">Notifications</string>
 </resources>
